@@ -94,7 +94,7 @@
       "image": "https://b2461891.smushcdn.com/2461891/wp-content/uploads/2022/09/cover.png?lossy=1&strip=1&webp=1",
       "github": "https://github.com/sarthakk88/Job-Agent",
       "demo": "",
-      "featured": true
+      "featured": false
     },
     {
       "title": "FPL Toolset",
@@ -103,14 +103,13 @@
       "technologies": [
         "Python",
         "Streamlit",
-        "APIs",
         "Langraph",
         "Gemini"
       ],
       "image": "https://cdn.fantasyfootballscout.co.uk/wp-content/uploads/2020/04/Fantasy-Premier-League.png",
       "github": "https://github.com/sarthakk88/FPL-Toolset",
       "demo": "https://fpl-toolset.streamlit.app/",
-      "featured": true
+      "featured": false
     },
     {
       "title": "GenAI Data Classification Agent",
@@ -123,7 +122,7 @@
         "Python",
         "AWS"
       ],
-      "image": "assets/images/data-agent.jpg",
+      "image": "https://cdn-icons-png.flaticon.com/512/12707/12707868.png",
       "github": "",
       "demo": "",
       "featured": true
@@ -136,9 +135,10 @@
         "Bedrock",
         "OpenSearch",
         "MITRE ATT&CK",
-        "AWS Security Lake"
+        "AWS Security Lake",
+        "Athena"
       ],
-      "image": "assets/images/threat-hunting.jpg",
+      "image": "https://cdn-icons-png.flaticon.com/512/1303/1303037.png",
       "github": "",
       "demo": "",
       "featured": true
@@ -154,18 +154,34 @@
         "AWS Glue",
         "EMR"
       ],
-      "image": "assets/images/anomaly-detection.jpg",
+      "image": "https://static.vecteezy.com/system/resources/previews/034/988/914/original/2d-gradient-icon-anomaly-detection-concept-isolated-predictive-maintenance-thin-line-illustration-vector.jpg",
+      "github": "",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "title": "Customer Segmentation ML Model",
+      "category": "ml",
+      "description": "XGBoost-based machine learning model deployed in SageMaker to identify high-potential customers for outbound campaigns using internal customer data.",
+      "technologies": [
+        "XGBoost",
+        "SageMaker",
+        "Python",
+        "AWS"
+      ],
+      "image": "https://cdn4.iconfinder.com/data/icons/market-segmentation/500/yul1360_2_customer_segmentation-512.png",
       "github": "",
       "demo": "",
       "featured": false
     }
+
   ],
   "experience": [
     {
       "company": "PricewaterhouseCoopers",
       "position": "Senior Associate",
       "duration": "Jul 2022 - Present",
-      "description": "Lead AI/ML engineer developing GenAI agents, conversational chatbots, and machine learning solutions. Built ETL pipelines processing 10M+ data points daily and achieved significant performance improvements across multiple projects."
+      "description": "Data Scientist designing and deploying data‑driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud‑based systems."
     },
     {
       "company": "Delhi Technological University",
@@ -178,8 +194,7 @@
     {
       "institution": "Delhi Technological University",
       "degree": "Bachelor of Technology (Mathematics and Computing)",
-      "duration": "2018 - 2022",
-      "gpa": "8.57/10.0"
+      "duration": "2018 - 2022"
     }
   ],
   "certifications": [
