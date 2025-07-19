@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <meta name="description" content="Professional tech portfolio showcasing modern web development projects">
+    <title>Sarthak Singh - Data Scientist Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loader"></div>
-    </div>
-
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span id="nav-name">Portfolio</span>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">Sarthak Singh</a>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
@@ -32,91 +26,55 @@
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
+        <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">
-                        Hi, I'm <span id="hero-name" class="highlight">Your Name</span>
-                    </h1>
-                    <div class="hero-subtitle">
-                        <span id="hero-title">Full Stack Developer</span>
-                    </div>
-                    <p id="hero-bio" class="hero-description">
-                        Passionate developer creating modern web applications
-                    </p>
+                    <h1>Sarthak Singh</h1>
+                    <h2 class="typing-text">Senior Associate | Data Scientist</h2>
+                    <p>Data Scientist with 3 years of experience in designing and deploying data‑driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud‑based systems.</p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-rocket"></i> View Projects
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i> Get In Touch
-                        </a>
-                    </div>
-                    <div class="social-links" id="social-links">
-                        <!-- Social links will be populated by JS -->
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="profile-card">
-                        <div class="profile-image">
-                            <img src="assets/images/profile.jpg" alt="Profile" id="profile-img">
-                        </div>
-                        <div class="profile-status">
-                            <div class="status-dot"></div>
-                            <span>Available for work</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="scroll-arrow">
-                    <i class="fas fa-chevron-down"></i>
+                    <img src="assets/images/profile.jpg" alt="Sarthak Singh">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section about">
+    <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
+                <h2>About Me</h2>
+                <p>Get to know more about who I am and what I do</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p id="about-bio">Passionate developer with expertise in modern web technologies...</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
+                    <h3>Data Scientist & AI Enthusiast</h3>
+                    <p id="bio-text">Data Scientist with 3 years of experience in designing and deploying data‑driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud‑based systems. Skilled in Python, AWS, and machine learning, with a strong foundation in mathematics and computing.</p>
+
+                    <div class="about-info">
+                        <div class="info-item">
+                            <strong>Location:</strong>
+                            <span id="location">Gurgaon, India</span>
                         </div>
-                        <div class="stat">
-                            <h3>5+</h3>
-                            <p>Years Experience</p>
+                        <div class="info-item">
+                            <strong>Email:</strong>
+                            <span id="email">sarthak.snhsingh104@gmail.com</span>
                         </div>
-                        <div class="stat">
-                            <h3>100%</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
-                    </div>
-                    <a href="#" id="resume-link" class="btn btn-outline">
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
-                </div>
-                <div class="about-image">
-                    <div class="image-card">
-                        <img src="assets/images/about.jpg" alt="About Me">
                     </div>
                 </div>
             </div>
@@ -124,31 +82,33 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section skills">
+    <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">Technologies I work with</p>
+                <h2>Skills & Technologies</h2>
+                <p>The skills and technologies I work with</p>
             </div>
-            <div class="skills-container" id="skills-container">
+            <div class="skills-grid" id="skills-grid">
                 <!-- Skills will be populated by JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section projects">
+    <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+                <h2>Featured Projects</h2>
+                <p>Some of the projects I've worked on</p>
             </div>
-            <div class="project-filters">
+
+            <!-- Project Filter -->
+            <div class="project-filter">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="ai">GenAI</button>
                 <button class="filter-btn" data-filter="ml">Machine Learning</button>
             </div>
+
             <div class="projects-grid" id="projects-grid">
                 <!-- Projects will be populated by JavaScript -->
             </div>
@@ -156,72 +116,60 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section experience">
+    <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">My professional journey</p>
+                <h2>Work Experience</h2>
+                <p>My professional journey</p>
             </div>
             <div class="timeline" id="timeline">
-                <!-- Timeline will be populated by JavaScript -->
+                <!-- Experience will be populated by JavaScript -->
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact">
+    <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together</p>
+                <h2>Get In Touch</h2>
+                <p>Let's discuss your next project</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
+                        <i class="fas fa-envelope"></i>
+                        <div>
                             <h3>Email</h3>
-                            <p id="contact-email">your.email@example.com</p>
+                            <p id="contact-email">sarthak.snhsingh104@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p id="contact-phone">+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
                             <h3>Location</h3>
-                            <p id="contact-location">City, Country</p>
+                            <p id="contact-location">Gurgaon, India</p>
                         </div>
+                    </div>
+                    <div class="social-links" id="social-links">
+                        <!-- Social links will be populated by JavaScript -->
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contact-form">
+                    <form id="contact-form" action="#" method="post">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="email-input" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -232,19 +180,14 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 <span id="footer-name">Your Name</span>. All rights reserved.</p>
+                <p>&copy; 2025 Sarthak Singh. All rights reserved.</p>
                 <div class="footer-social" id="footer-social">
-                    <!-- Social links will be populated by JS -->
+                    <!-- Social links will be populated by JavaScript -->
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
