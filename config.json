@@ -1,18 +1,17 @@
 {
   "personal_info": {
     "name": "Sarthak Singh",
-    "title": "Senior Associate | AI/ML Engineer",
-    "location": "Mumbai, India",
+    "title": "Senior Associate | Data Scientist",
+    "location": "Gurgaon, India",
     "email": "sarthak.snhsingh104@gmail.com",
-    "phone": "+91 7705967629",
-    "bio": "AI/ML Engineer at PricewaterhouseCoopers with expertise in GenAI, machine learning, and cloud technologies. Passionate about building intelligent systems that solve real-world problems using cutting-edge AI technologies.",
+    "bio": "Data Scientist with 3 years of experience in designing and deploying data‑driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud‑based systems. Skilled in Python, AWS, and machine learning, with a strong foundation in mathematics and computing.",
     "resume_url": ""
   },
   "social_links": {
-    "linkedin": "https://linkedin.com/in/sarthaksingh",
-    "github": "https://github.com/sarthaksingh",
+    "linkedin": "http://linkedin.com/in/sarthakk88",
+    "github": "https://github.com/sarthakk88",
     "twitter": "",
-    "portfolio": "https://sarthaksingh.github.io"
+    "portfolio": "https://sarthakk88.github.io"
   },
   "skills": [
     {
@@ -20,8 +19,7 @@
       "technologies": [
         "Python",
         "C/C++",
-        "Node.js",
-        "JavaScript"
+        "Node.js"
       ]
     },
     {
@@ -33,7 +31,9 @@
         "PyTorch",
         "TensorFlow",
         "Scikit-learn",
-        "XGBoost"
+        "Machine Learning",
+        "Natural Language Processing(NLP)",
+        "Neural Network"
       ]
     },
     {
@@ -47,7 +47,8 @@
         "EMR",
         "DynamoDB",
         "S3",
-        "Athena"
+        "Athena",
+        "GCP"
       ]
     },
     {
@@ -67,8 +68,7 @@
       "technologies": [
         "FastAPI",
         "Docker",
-        "Streamlit",
-        "RESTful APIs"
+        "Streamlit"
       ]
     },
     {
@@ -76,9 +76,7 @@
       "technologies": [
         "OpenSearchpy",
         "RAGAs",
-        "Google CCAI",
-        "AWS Textract",
-        "MITRE ATT&CK"
+        "AWS Textract"
       ]
     }
   ],
@@ -93,8 +91,8 @@
         "Python",
         "DuckDuckGo API"
       ],
-      "image": "assets/images/career-assistant.jpg",
-      "github": "https://github.com/sarthaksingh/genai-career-assistant",
+      "image": "https://b2461891.smushcdn.com/2461891/wp-content/uploads/2022/09/cover.png?lossy=1&strip=1&webp=1",
+      "github": "https://github.com/sarthakk88/Job-Agent",
       "demo": "",
       "featured": true
     },
@@ -109,9 +107,9 @@
         "Langraph",
         "Gemini"
       ],
-      "image": "assets/images/fpl-toolset.jpg",
-      "github": "https://github.com/sarthaksingh/fpl-toolset",
-      "demo": "https://fpl-toolset.streamlit.app",
+      "image": "https://cdn.fantasyfootballscout.co.uk/wp-content/uploads/2020/04/Fantasy-Premier-League.png",
+      "github": "https://github.com/sarthakk88/FPL-Toolset",
+      "demo": "https://fpl-toolset.streamlit.app/",
       "featured": true
     },
     {
@@ -157,21 +155,6 @@
         "EMR"
       ],
       "image": "assets/images/anomaly-detection.jpg",
-      "github": "",
-      "demo": "",
-      "featured": false
-    },
-    {
-      "title": "Customer Segmentation ML Model",
-      "category": "ml",
-      "description": "XGBoost-based machine learning model deployed in SageMaker to identify high-potential customers for outbound campaigns using internal customer data.",
-      "technologies": [
-        "XGBoost",
-        "SageMaker",
-        "Python",
-        "AWS"
-      ],
-      "image": "assets/images/customer-segmentation.jpg",
       "github": "",
       "demo": "",
       "featured": false
