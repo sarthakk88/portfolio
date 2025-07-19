@@ -970,12 +970,20 @@ html {
 
 .project-image {
   height: 200px;
+  width: 100%;
   background: var(--color-bg-2);
   border-radius: var(--radius-base);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-16);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Crop image while preserving aspect ratio */
 }
 
 .project-placeholder {
