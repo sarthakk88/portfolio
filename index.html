@@ -3,81 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarthak Singh - Data Scientist Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Sarthak Singh | Data Scientist</title>
+    <meta name="description" content="Data Scientist with expertise in AI/ML, AWS, and GenAI solutions">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="#home">Sarthak Singh</a>
+                <a href="#" class="nav-logo">Sarthak Singh</a>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#education" class="nav-link">Education</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-            <div class="hamburger" id="hamburger">
+            <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button class="theme-toggle btn btn--outline btn--sm" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Sarthak Singh</h1>
-                    <h2 class="typing-text">Senior Associate | Data Scientist</h2>
-                    <p>Data Scientist with 3 years of experience in designing and deploying data‑driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud‑based systems.</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn">View My Work</a>
-                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <h1>Hi, I'm <span class="highlight">Sarthak Singh</span></h1>
+                    <p class="hero-subtitle">
+                        I'm a <span class="typewriter" data-roles="Data Scientist,GenAI Specialist,ML Engineer,AWS Expert"></span>
+                    </p>
+                    <p class="hero-description">
+                        Generative-AI specialist building scalable AI agents and data pipelines. Passionate about solving business problems with ML and cloud.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn--primary btn--lg">View My Work</a>
+                        <a href="#contact" class="btn btn--outline btn--lg">Get In Touch</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/images/profile.jpg" alt="Sarthak Singh" onerror="this.src='https://via.placeholder.com/300x300/f3f4f6/9ca3af?text=Profile+Photo'">
+                    <img src="./assets/images/profile.jpg" alt="Sarthak Singh" width="300" height="300">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section">
         <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Get to know more about my background and expertise</p>
+            </div>
             <div class="about-content">
-                <div class="about-image">
-                    <img src="assets/images/profile.jpg" alt="About Sarthak" onerror="this.src='https://via.placeholder.com/300x400/f3f4f6/9ca3af?text=About+Photo'">
-                </div>
                 <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>Data Scientist with 3 years of experience in designing and deploying data‑driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud‑based systems. Skilled in Python, AWS, and machine learning, with a strong foundation in mathematics and computing.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>7+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h3>5+</h3>
-                            <p>GenAI Solutions</p>
-                        </div>
+                    <p>
+                        Data Scientist with 3 years of experience in designing and deploying data-driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud-based systems.
+                    </p>
+                    <p>
+                        Currently working as a Senior Associate at PwC, I focus on developing innovative AI solutions that drive business value and operational efficiency. Skilled in Python, AWS, and machine learning, with a strong foundation in mathematics and computing.
+                    </p>
+                    <div class="about-achievements">
+                        <h3>Recent Achievements</h3>
+                        <ul>
+                            <li>AWS Certified AI Practitioner (2025-28)</li>
+                            <li>PwC Star Team and Individual Award (2024)</li>
+                            <li>Reduced threat investigation time by 45% with AI agent</li>
+                            <li>Achieved 99% reduction in vendor evaluation time</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-education">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>Delhi Technological University</h4>
+                        <p><strong>B.Tech, Mathematics & Computing</strong></p>
+                        <p>2018-2022 • CGPA: 8.57</p>
                     </div>
                 </div>
             </div>
@@ -85,65 +104,70 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <!-- Skills will be populated by JavaScript -->
+            <div class="section-header">
+                <h2>Skills & Technologies</h2>
+                <p>Technologies and tools I work with</p>
+            </div>
+            <div id="skills-container" class="skills-grid">
+                <!-- Skills will be dynamically loaded here -->
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A showcase of my recent work and contributions</p>
+            </div>
 
             <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="genai">GenAI</button>
-                <button class="filter-btn" data-filter="ml">ML</button>
+                <button class="btn btn--outline filter-btn active" data-filter="all">All Projects</button>
+                <button class="btn btn--outline filter-btn" data-filter="ai">GenAI</button>
+                <button class="btn btn--outline filter-btn" data-filter="ml">Machine Learning</button>
             </div>
 
-            <div class="projects-grid">
-                <!-- Projects will be populated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-timeline">
-                <!-- Experience will be populated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <!-- Education will be populated by JavaScript -->
+            <div id="projects-container" class="projects-grid">
+                <!-- Projects will be dynamically loaded here -->
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-header">
+                <h2>Let's Connect</h2>
+                <p>Let's discuss opportunities and collaborations</p>
+            </div>
+
             <div class="contact-content">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:sarthak.snhsingh104@gmail.com" class="contact-value">sarthak.snhsingh104@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span class="contact-value">Gurgaon, India</span>
-                </div>
+                <form class="contact-form" action="mailto:sarthak.snhsingh104@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name *</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" rows="6" class="form-control" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -151,13 +175,117 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="social-links">
-                <!-- Social links will be populated by JavaScript -->
+            <div class="footer-social">
+                <a href="https://github.com/sarthakk88" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="http://linkedin.com/in/sarthakk88" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:sarthak.snhsingh104@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
-            <p>&copy; 2024 Sarthak Singh. All rights reserved.</p>
+            <p>&copy; 2025 Sarthak Singh. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
+    <!-- Dynamic Content Loading Script -->
+    <script>
+        // Load and render content from config.json
+        fetch('./config.json')
+            .then(response => response.json())
+            .then(config => {
+                // Load Skills
+                const skillsContainer = document.getElementById('skills-container');
+                if (skillsContainer && config.skills) {
+                    skillsContainer.innerHTML = '';
+                    config.skills.forEach(category => {
+                        category.technologies.forEach(tech => {
+                            const skillItem = document.createElement('div');
+                            skillItem.className = 'skill-item';
+                            skillItem.textContent = tech;
+                            skillsContainer.appendChild(skillItem);
+                        });
+                    });
+                }
+
+                // Load Projects
+                const projectsContainer = document.getElementById('projects-container');
+                if (projectsContainer && config.projects) {
+                    projectsContainer.innerHTML = '';
+                    config.projects.forEach(project => {
+                        const projectCard = document.createElement('div');
+                        projectCard.className = 'project-card card';
+                        projectCard.setAttribute('data-category', project.category);
+
+                        projectCard.innerHTML = `
+                            <div class="card__body">
+                                <div class="project-image">
+                                    <img src="${project.image}" alt="${project.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="project-placeholder" style="display: none;">
+                                        <i class="fas fa-${project.category === 'ai' ? 'brain' : 'chart-line'}"></i>
+                                    </div>
+                                </div>
+                                <h3>${project.title}</h3>
+                                <p>${project.description}</p>
+                                <div class="project-tech">
+                                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                                </div>
+                                <div class="project-links">
+                                    ${project.github ? `<a href="${project.github}" target="_blank" class="btn btn--outline btn--sm" rel="noopener noreferrer">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>` : ''}
+                                    ${project.demo ? `<a href="${project.demo}" target="_blank" class="btn btn--primary btn--sm" rel="noopener noreferrer">
+                                        <i class="fas fa-external-link-alt"></i> Demo
+                                    </a>` : ''}
+                                </div>
+                            </div>
+                        `;
+                        projectsContainer.appendChild(projectCard);
+                    });
+                }
+
+                // Update social links
+                const githubLink = document.querySelector('a[href*="github"]');
+                const linkedinLink = document.querySelector('a[href*="linkedin"]');
+                const emailLinks = document.querySelectorAll('a[href*="mailto"]');
+
+                if (githubLink && config.social_links.github) {
+                    githubLink.href = config.social_links.github;
+                }
+                if (linkedinLink && config.social_links.linkedin) {
+                    linkedinLink.href = config.social_links.linkedin;
+                }
+                emailLinks.forEach(link => {
+                    if (config.personal_info.email) {
+                        link.href = `mailto:${config.personal_info.email}`;
+                    }
+                });
+
+                // Update contact form action
+                const contactForm = document.querySelector('.contact-form');
+                if (contactForm && config.personal_info.email) {
+                    contactForm.action = `mailto:${config.personal_info.email}`;
+                }
+
+                // Update title and meta description
+                if (config.personal_info.name) {
+                    document.title = `${config.personal_info.name} | ${config.personal_info.title}`;
+                }
+            })
+            .catch(error => {
+                console.error('Error loading config:', error);
+                // Fallback content or error handling
+            });
+    </script>
 </body>
 </html>
