@@ -1,0 +1,216 @@
+{
+  "personal_info": {
+    "name": "Sarthak Singh",
+    "title": "Senior Associate | AI/ML Engineer",
+    "location": "Mumbai, India",
+    "email": "sarthak.snhsingh104@gmail.com",
+    "phone": "+91 7705967629",
+    "bio": "AI/ML Engineer at PricewaterhouseCoopers with expertise in GenAI, machine learning, and cloud technologies. Passionate about building intelligent systems that solve real-world problems using cutting-edge AI technologies.",
+    "resume_url": ""
+  },
+  "social_links": {
+    "linkedin": "https://linkedin.com/in/sarthaksingh",
+    "github": "https://github.com/sarthaksingh",
+    "twitter": "",
+    "portfolio": "https://sarthaksingh.github.io"
+  },
+  "skills": [
+    {
+      "category": "Programming",
+      "technologies": [
+        "Python",
+        "C/C++",
+        "Node.js",
+        "JavaScript"
+      ]
+    },
+    {
+      "category": "AI/ML",
+      "technologies": [
+        "GenAI",
+        "LangChain",
+        "Transformers",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "XGBoost"
+      ]
+    },
+    {
+      "category": "Cloud & AWS",
+      "technologies": [
+        "AWS Lambda",
+        "SageMaker",
+        "OpenSearch",
+        "Bedrock",
+        "Glue",
+        "EMR",
+        "DynamoDB",
+        "S3",
+        "Athena"
+      ]
+    },
+    {
+      "category": "Data & Analytics",
+      "technologies": [
+        "Pandas",
+        "NumPy",
+        "PySpark",
+        "SQL",
+        "MySQL",
+        "Tableau",
+        "QuickSight"
+      ]
+    },
+    {
+      "category": "Web & APIs",
+      "technologies": [
+        "FastAPI",
+        "Docker",
+        "Streamlit",
+        "RESTful APIs"
+      ]
+    },
+    {
+      "category": "Specialized Tools",
+      "technologies": [
+        "OpenSearchpy",
+        "RAGAs",
+        "Google CCAI",
+        "AWS Textract",
+        "MITRE ATT&CK"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "GenAI Career Assistant",
+      "category": "ai",
+      "description": "AI-powered career assistant using Langraph and Gemini, with tools like DuckDuckGo for real-time information retrieval. Enables structured learning, resume building, interview preparation, and job search assistance.",
+      "technologies": [
+        "Langraph",
+        "Gemini",
+        "Python",
+        "DuckDuckGo API"
+      ],
+      "image": "assets/images/career-assistant.jpg",
+      "github": "https://github.com/sarthaksingh/genai-career-assistant",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "title": "FPL Toolset",
+      "category": "web",
+      "description": "Fantasy Premier League team building website using data from Understat and FPL APIs, with an agentic chatbot for real-time team news updates using Langraph and Gemini.",
+      "technologies": [
+        "Python",
+        "Streamlit",
+        "APIs",
+        "Langraph",
+        "Gemini"
+      ],
+      "image": "assets/images/fpl-toolset.jpg",
+      "github": "https://github.com/sarthaksingh/fpl-toolset",
+      "demo": "https://fpl-toolset.streamlit.app",
+      "featured": true
+    },
+    {
+      "title": "GenAI Data Classification Agent",
+      "category": "ai",
+      "description": "GenAI agent leveraging OpenSearch and SageMaker to convert raw data into schema and classify into correct event categories. Achieved 50% performance improvement with custom embedding model.",
+      "technologies": [
+        "OpenSearch",
+        "SageMaker",
+        "Sentence Transformer",
+        "Python",
+        "AWS"
+      ],
+      "image": "assets/images/data-agent.jpg",
+      "github": "",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "title": "AI Threat Hunting Agent",
+      "category": "ai",
+      "description": "Conversational AI agent for MITRE ATT&CK analysis on Security Lake data, enhancing threat investigation and mitigation. Reduced threat investigation speed by 45%.",
+      "technologies": [
+        "Bedrock",
+        "OpenSearch",
+        "MITRE ATT&CK",
+        "AWS Security Lake"
+      ],
+      "image": "assets/images/threat-hunting.jpg",
+      "github": "",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "title": "Anomaly Detection System",
+      "category": "ml",
+      "description": "Unsupervised anomaly detection using Isolation Forest and DBSCAN on Okta login data for cybersecurity platform processing 10M+ data points daily.",
+      "technologies": [
+        "Python",
+        "Isolation Forest",
+        "DBSCAN",
+        "AWS Glue",
+        "EMR"
+      ],
+      "image": "assets/images/anomaly-detection.jpg",
+      "github": "",
+      "demo": "",
+      "featured": false
+    },
+    {
+      "title": "Customer Segmentation ML Model",
+      "category": "ml",
+      "description": "XGBoost-based machine learning model deployed in SageMaker to identify high-potential customers for outbound campaigns using internal customer data.",
+      "technologies": [
+        "XGBoost",
+        "SageMaker",
+        "Python",
+        "AWS"
+      ],
+      "image": "assets/images/customer-segmentation.jpg",
+      "github": "",
+      "demo": "",
+      "featured": false
+    }
+  ],
+  "experience": [
+    {
+      "company": "PricewaterhouseCoopers",
+      "position": "Senior Associate",
+      "duration": "Jul 2022 - Present",
+      "description": "Lead AI/ML engineer developing GenAI agents, conversational chatbots, and machine learning solutions. Built ETL pipelines processing 10M+ data points daily and achieved significant performance improvements across multiple projects."
+    },
+    {
+      "company": "Delhi Technological University",
+      "position": "Research Intern",
+      "duration": "Jun 2021 - Jul 2021",
+      "description": "Built Markov Model for Reliability and Availability Analysis of Degrading Systems under Imperfect Repair Scenario. Achieved 10.84% gain in system availability for 50,000-hour mission period."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Delhi Technological University",
+      "degree": "Bachelor of Technology (Mathematics and Computing)",
+      "duration": "2018 - 2022",
+      "gpa": "8.57/10.0"
+    }
+  ],
+  "certifications": [
+    "AWS Certified AI Practitioner (2025-28)",
+    "Generative AI with Large Language Models (DeepLearning.AI)",
+    "PwC Star Team and Individual Award (2024)"
+  ],
+  "theme": {
+    "primary_color": "#3B82F6",
+    "secondary_color": "#1E40AF",
+    "accent_color": "#F59E0B",
+    "text_primary": "#1F2937",
+    "text_secondary": "#6B7280",
+    "background": "#FFFFFF",
+    "background_dark": "#111827"
+  }
+}
