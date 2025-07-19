@@ -4,8 +4,7 @@
     "title": "Senior Associate | Data Scientist",
     "location": "Gurgaon, India",
     "email": "sarthak.snhsingh104@gmail.com",
-    "bio": "Data Scientist with 3 years of experience in designing and deploying data\u2011driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud\u2011based systems. Skilled in Python, AWS, and machine learning, with a strong foundation in mathematics and computing.",
-    "resume_url": ""
+    "bio": "Data Scientist with 3 years of experience in designing and deploying data\u2011driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud\u2011based systems. Skilled in Python, AWS, and machine learning, with a strong foundation in mathematics and computing."
   },
   "social_links": {
     "linkedin": "http://linkedin.com/in/sarthakk88",
@@ -25,14 +24,15 @@
     {
       "category": "AI/ML",
       "technologies": [
-        "Machine Learning",
-        "NLP",
-        "Neural Network",
         "GenAI",
+        "LangChain",
         "Transformers",
         "PyTorch",
         "TensorFlow",
-        "Scikit-learn"
+        "Scikit-learn",
+        "Machine Learning",
+        "Natural Language Processing(NLP)",
+        "Neural Network"
       ]
     },
     {
@@ -43,12 +43,11 @@
         "OpenSearch",
         "Bedrock",
         "Glue",
-        "Serverless EMR",
+        "EMR",
         "DynamoDB",
         "S3",
         "Athena",
-        "VertexAI",
-        "Google Agent Assist"
+        "GCP"
       ]
     },
     {
@@ -58,6 +57,7 @@
         "NumPy",
         "PySpark",
         "SQL",
+        "MySQL",
         "Tableau",
         "QuickSight"
       ]
@@ -73,8 +73,8 @@
     {
       "category": "Specialized Tools",
       "technologies": [
+        "OpenSearchpy",
         "RAGAs",
-        "LangChain",
         "AWS Textract"
       ]
     }
@@ -82,43 +82,29 @@
   "projects": [
     {
       "title": "GenAI Career Assistant",
-      "category": "ai",
-      "description": "AI-powered career assistant using Langraph and Gemini, with tools like DuckDuckGo for real-time information retrieval. Enables structured learning, resume building, interview preparation, and job search assistance.",
+      "category": "genai",
+      "description": "AI-powered career guidance system using natural language processing to provide personalized career recommendations and skill development paths.",
       "technologies": [
-        "Langraph",
-        "Gemini",
         "Python",
-        "DuckDuckGo API"
+        "OpenAI",
+        "LangChain",
+        "Streamlit",
+        "AWS"
       ],
       "image": "assets/images/career-assistant.png",
-      "github": "https://github.com/sarthakk88/Job-Agent",
+      "github": "https://github.com/sarthakk88/career-assistant",
       "demo": "",
-      "featured": false
+      "featured": true
     },
     {
-      "title": "FPL Toolset",
-      "category": "ai",
-      "description": "Fantasy Premier League team building website using data from Understat and FPL APIs, with an agentic chatbot for real-time team news updates using Langraph and Gemini.",
+      "title": "Data Classification",
+      "category": "genai",
+      "description": "Advanced data classification system using generative AI for automated content categorization and data organization.",
       "technologies": [
         "Python",
-        "Streamlit",
-        "Langraph",
-        "Gemini"
-      ],
-      "image": "assets/images/fpl-toolset.png",
-      "github": "https://github.com/sarthakk88/FPL-Toolset",
-      "demo": "https://fpl-toolset.streamlit.app/",
-      "featured": false
-    },
-    {
-      "title": "GenAI Data Classification Agent",
-      "category": "ai",
-      "description": "GenAI agent leveraging OpenSearch and SageMaker to convert raw data into schema and classify into correct event categories. Achieved 50% performance improvement with custom embedding model.",
-      "technologies": [
-        "OpenSearch",
-        "SageMaker",
-        "Sentence Transformer",
-        "Python",
+        "GenAI",
+        "NLP",
+        "Transformers",
         "AWS"
       ],
       "image": "assets/images/data-agent.png",
@@ -127,15 +113,15 @@
       "featured": true
     },
     {
-      "title": "AI Threat Hunting Agent",
-      "category": "ai",
-      "description": "Conversational AI agent for MITRE ATT&CK analysis on Security Lake data, enhancing threat investigation and mitigation. Reduced threat investigation speed by 45%.",
+      "title": "Threat Hunting Agent",
+      "category": "genai",
+      "description": "AI-powered cybersecurity agent for proactive threat detection and analysis using machine learning algorithms.",
       "technologies": [
-        "Bedrock",
-        "OpenSearch",
-        "MITRE ATT&CK",
-        "AWS Security Lake",
-        "Athena"
+        "Python",
+        "ML",
+        "Cybersecurity",
+        "AWS",
+        "OpenSearch"
       ],
       "image": "assets/images/threat-hunting.png",
       "github": "",
@@ -143,39 +129,24 @@
       "featured": true
     },
     {
-      "title": "Anomaly Detection System",
-      "category": "ml",
-      "description": "Unsupervised anomaly detection using Isolation Forest and DBSCAN on Okta login data for cybersecurity platform processing 10M+ data points daily.",
+      "title": "FPL Toolset",
+      "category": "genai",
+      "description": "Fantasy Premier League analysis toolkit with AI-driven player recommendations and performance predictions.",
       "technologies": [
         "Python",
-        "Isolation Forest",
-        "DBSCAN",
-        "AWS Glue",
-        "EMR"
+        "ML",
+        "Data Analysis",
+        "APIs",
+        "Visualization"
       ],
-      "image": "assets/images/anomaly-detection.jpg",
+      "image": "assets/images/fpl-toolset.png",
       "github": "",
       "demo": "",
       "featured": true
     },
     {
-      "title": "Customer Segmentation ML Model",
-      "category": "ml",
-      "description": "XGBoost-based machine learning model deployed in SageMaker to identify high-potential customers for outbound campaigns using internal customer data.",
-      "technologies": [
-        "XGBoost",
-        "SageMaker",
-        "Python",
-        "AWS"
-      ],
-      "image": "assets/images/customer-segmentation.png",
-      "github": "",
-      "demo": "",
-      "featured": false
-    },
-    {
-      "title": "Vendor Compliance Evaluation Agent",
-      "category": "ai",
+      "title": "Vendor Compliance Agent",
+      "category": "genai",
       "description": "Designed an agentic workflow using OpenSearch, LangChain, and Bedrock to evaluate third-party vendor evidence for compliance, generate comprehensive gap analyses, and develop a custom evaluator\u2014reducing evaluation time by 99%",
       "technologies": [
         "OpenSearch",
@@ -188,41 +159,81 @@
       "github": "",
       "demo": "",
       "featured": true
+    },
+    {
+      "title": "Anomaly Detection",
+      "category": "ml",
+      "description": "Machine learning system for detecting unusual patterns and anomalies in large datasets using statistical and ML approaches.",
+      "technologies": [
+        "Python",
+        "Scikit-learn",
+        "pandas",
+        "NumPy",
+        "Visualization"
+      ],
+      "image": "assets/images/anomaly-detection.jpg",
+      "github": "",
+      "demo": "",
+      "featured": true
+    },
+    {
+      "title": "Customer Segmentation",
+      "category": "ml",
+      "description": "Advanced customer segmentation analysis using machine learning clustering algorithms for targeted marketing strategies.",
+      "technologies": [
+        "Python",
+        "ML",
+        "Clustering",
+        "Data Analysis",
+        "Visualization"
+      ],
+      "image": "assets/images/customer-segmentation.png",
+      "github": "",
+      "demo": "",
+      "featured": true
     }
   ],
   "experience": [
     {
-      "company": "PricewaterhouseCoopers",
       "position": "Senior Associate",
-      "duration": "Jul 2022 - Present",
-      "description": "Designed and deployed data\u2011driven solutions using AWS and AI technologies. Developed robust ETL pipelines, created conversational AI agents, and optimized cloud\u2011based systems."
+      "company": "PwC India",
+      "period": "2022 - Present",
+      "description": "Leading data science initiatives and AI/ML projects for enterprise clients",
+      "achievements": [
+        "Designed and deployed multiple GenAI solutions reducing processing time by 99%",
+        "Built robust ETL pipelines using AWS services",
+        "Developed conversational AI agents for business automation",
+        "Optimized cloud-based systems for improved performance"
+      ]
     },
     {
-      "company": "Delhi Technological University",
-      "position": "Research Intern",
-      "duration": "Jun 2021 - Jul 2021",
-      "description": "Built Markov Model for Reliability and Availability Analysis of Degrading Systems under Imperfect Repair Scenario. Achieved 10.84% gain in system availability for 50,000-hour mission period."
+      "position": "Data Scientist",
+      "company": "Previous Role",
+      "period": "2021 - 2022",
+      "description": "Focused on machine learning model development and data analysis",
+      "achievements": [
+        "Implemented anomaly detection systems",
+        "Performed customer segmentation analysis",
+        "Built predictive models for business intelligence"
+      ]
     }
   ],
   "education": [
     {
-      "institution": "Delhi Technological University",
-      "degree": "Bachelor of Technology (Mathematics and Computing)",
-      "duration": "2018 - 2022"
+      "degree": "Bachelor of Technology",
+      "field": "Computer Science Engineering",
+      "institution": "University Name",
+      "period": "2018 - 2022",
+      "grade": "CGPA: 8.5/10",
+      "description": "Focused on computer science fundamentals, mathematics, and machine learning. Completed projects in data structures, algorithms, and artificial intelligence."
+    },
+    {
+      "degree": "Higher Secondary",
+      "field": "Science (PCM)",
+      "institution": "School Name",
+      "period": "2016 - 2018",
+      "grade": "92%",
+      "description": "Studied Physics, Chemistry, and Mathematics with focus on analytical thinking and problem-solving."
     }
-  ],
-  "certifications": [
-    "AWS Certified AI Practitioner (2025-28)",
-    "Generative AI with Large Language Models (DeepLearning.AI)",
-    "PwC Star Team and Individual Award (2024)"
-  ],
-  "theme": {
-    "primary_color": "#3B82F6",
-    "secondary_color": "#1E40AF",
-    "accent_color": "#F59E0B",
-    "text_primary": "#1F2937",
-    "text_secondary": "#6B7280",
-    "background": "#FFFFFF",
-    "background_dark": "#111827"
-  }
+  ]
 }

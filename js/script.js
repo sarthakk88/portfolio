@@ -1,4 +1,4 @@
-// Traditional Portfolio JavaScript
+// Traditional Portfolio JavaScript - Enhanced Version with Education
 class Portfolio {
     constructor() {
         this.config = null;
@@ -66,79 +66,94 @@ class Portfolio {
             });
         }
 
-        // Close mobile menu when clicking on a link
+        // Close mobile menu when clicking nav links
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (navMenu) {
-                    navMenu.classList.remove('active');
-                }
-                if (hamburger) {
-                    hamburger.classList.remove('active');
-                }
+                if (navMenu) navMenu.classList.remove('active');
+                if (hamburger) hamburger.classList.remove('active');
             });
         });
 
-        // Project filters
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                filterBtns.forEach(b => b.classList.remove('active'));
+        // Project filter buttons with smooth animations
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const filter = e.target.dataset.filter;
+                this.filterProjectsSmooth(filter);
+
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
                 e.target.classList.add('active');
-                this.filterProjects(e.target.dataset.filter);
             });
         });
 
-        // Contact form
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', this.handleFormSubmit.bind(this));
-        }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Smooth scrolling for nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
     }
 
     populateContent() {
-        this.populatePersonalInfo();
+        this.populateHero();
+        this.populateAbout();
         this.populateSkills();
         this.populateProjects();
         this.populateExperience();
+        this.populateEducation();
+        this.populateContact();
         this.populateSocialLinks();
     }
 
-    populatePersonalInfo() {
+    populateHero() {
         const { personal_info } = this.config;
 
-        // Update text content
-        this.updateElement('bio-text', personal_info.bio);
-        this.updateElement('location', personal_info.location);
-        this.updateElement('email', personal_info.email);
-        this.updateElement('contact-email', personal_info.email);
-        this.updateElement('contact-location', personal_info.location);
+        const heroName = document.querySelector('.hero h1');
+        const heroTitle = document.querySelector('.typing-text');
+        const heroBio = document.querySelector('.hero p');
+
+        if (heroName) heroName.textContent = personal_info.name;
+        if (heroTitle) heroTitle.textContent = personal_info.title;
+        if (heroBio) heroBio.textContent = personal_info.bio;
+    }
+
+    populateAbout() {
+        const { personal_info } = this.config;
+
+        const aboutText = document.querySelector('#about .about-text p');
+        if (aboutText) {
+            aboutText.textContent = personal_info.bio;
+        }
+
+        // Add profile images
+        const profileImages = document.querySelectorAll('.hero-image img, .about-image img');
+        profileImages.forEach(img => {
+            img.src = './assets/images/profile.jpg';
+            img.onerror = function() {
+                this.src = 'https://via.placeholder.com/300x300/f3f4f6/9ca3af?text=Profile+Image';
+            };
+        });
     }
 
     populateSkills() {
-        const skillsGrid = document.getElementById('skills-grid');
-        if (!skillsGrid) return;
+        const skillsContainer = document.querySelector('.skills-grid');
+        if (!skillsContainer) return;
 
-        skillsGrid.innerHTML = '';
+        skillsContainer.innerHTML = '';
 
-        this.config.skills.forEach(skillCategory => {
-            const categoryDiv = document.createElement('div');
-            categoryDiv.className = 'skill-category fade-in';
-            categoryDiv.innerHTML = `
+        this.config.skills.forEach((skillCategory, index) => {
+            const skillCard = document.createElement('div');
+            skillCard.className = 'skill-card';
+            skillCard.style.animationDelay = `${index * 0.1}s`;
+
+            skillCard.innerHTML = `
                 <h3>${skillCategory.category}</h3>
                 <div class="skill-tags">
                     ${skillCategory.technologies.map(tech => 
@@ -146,169 +161,212 @@ class Portfolio {
                     ).join('')}
                 </div>
             `;
-            skillsGrid.appendChild(categoryDiv);
+
+            skillsContainer.appendChild(skillCard);
         });
     }
 
     populateProjects() {
-        const projectsGrid = document.getElementById('projects-grid');
+        const projectsContainer = document.querySelector('.projects-grid');
+        if (!projectsContainer) return;
+
+        projectsContainer.innerHTML = '';
+
+        this.config.projects.forEach((project, index) => {
+            const projectCard = this.createProjectCard(project, index);
+            projectsContainer.appendChild(projectCard);
+        });
+
+        // Initialize with all projects visible
+        this.currentFilter = 'all';
+    }
+
+    // Enhanced filter function with smooth animations
+    filterProjectsSmooth(filter) {
+        const projectsGrid = document.querySelector('.projects-grid');
         if (!projectsGrid) return;
 
-        projectsGrid.innerHTML = '';
+        // Add fade out effect
+        projectsGrid.style.opacity = '0.5';
+        projectsGrid.style.transform = 'translateY(20px)';
 
-        this.config.projects.forEach(project => {
-            const projectCard = document.createElement('div');
-            projectCard.className = `project-card fade-in`;
-            projectCard.dataset.category = project.category;
+        setTimeout(() => {
+            // Clear and repopulate
+            projectsGrid.innerHTML = '';
 
-            const githubLink = project.github ? 
-                `<a href="${project.github}" target="_blank" rel="noopener" class="project-link github">
-                    <i class="fab fa-github"></i> GitHub
-                </a>` : '';
+            this.config.projects.forEach((project, index) => {
+                if (filter === 'all' || project.category === filter) {
+                    const projectCard = this.createProjectCard(project, index);
+                    projectsGrid.appendChild(projectCard);
+                }
+            });
 
-            const demoLink = project.demo ? 
-                `<a href="${project.demo}" target="_blank" rel="noopener" class="project-link demo">
-                    <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>` : '';
+            // Add fade in effect
+            projectsGrid.style.opacity = '1';
+            projectsGrid.style.transform = 'translateY(0)';
 
-            projectCard.innerHTML = `
-                <div class="project-image">
-                    <i class="fas fa-code"></i>
+            this.currentFilter = filter;
+
+            // Re-initialize animations for new cards
+            setTimeout(() => {
+                this.initScrollAnimations();
+            }, 100);
+
+        }, 200);
+    }
+
+    // Helper method to create project cards with staggered animations
+    createProjectCard(project, index) {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card';
+        projectCard.dataset.category = project.category;
+        projectCard.style.animationDelay = `${index * 0.1}s`;
+
+        // Fix image path - use relative path from root
+        let imagePath = project.image;
+        if (imagePath && !imagePath.startsWith('http') && !imagePath.startsWith('./')) {
+            imagePath = './' + imagePath;
+        }
+        if (!imagePath || imagePath === './') {
+            imagePath = 'https://via.placeholder.com/400x250/f3f4f6/9ca3af?text=Project+Image';
+        }
+
+        projectCard.innerHTML = `
+            <div class="project-image">
+                <img src="${imagePath}" alt="${project.title}" onerror="this.src='https://via.placeholder.com/400x250/f3f4f6/9ca3af?text=Project+Image'">
+            </div>
+            <div class="project-content">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-technologies">
+                    ${project.technologies.map(tech => 
+                        `<span class="tech-tag">${tech}</span>`
+                    ).join('')}
                 </div>
-                <div class="project-info">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                    <div class="project-tech">
-                        ${project.technologies.map(tech => 
-                            `<span class="tech-tag">${tech}</span>`
-                        ).join('')}
-                    </div>
-                    <div class="project-links">
-                        ${githubLink}
-                        ${demoLink}
-                    </div>
+                <div class="project-links">
+                    ${project.github ? `<a href="${project.github}" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Code
+                    </a>` : ''}
+                    ${project.demo ? `<a href="${project.demo}" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                    </a>` : ''}
                 </div>
-            `;
+            </div>
+        `;
 
-            projectsGrid.appendChild(projectCard);
-        });
+        return projectCard;
     }
 
     populateExperience() {
-        const timeline = document.getElementById('timeline');
-        if (!timeline) return;
+        const experienceContainer = document.querySelector('.experience-timeline');
+        if (!experienceContainer) return;
 
-        timeline.innerHTML = '';
+        experienceContainer.innerHTML = '';
 
-        this.config.experience.forEach(exp => {
-            const timelineItem = document.createElement('div');
-            timelineItem.className = 'timeline-item fade-in';
-            timelineItem.innerHTML = `
-                <div class="timeline-content">
-                    <div class="timeline-dot"></div>
+        this.config.experience.forEach((exp, index) => {
+            const experienceItem = document.createElement('div');
+            experienceItem.className = 'experience-item';
+            experienceItem.style.animationDelay = `${index * 0.2}s`;
+
+            experienceItem.innerHTML = `
+                <div class="experience-content">
                     <h3>${exp.position}</h3>
                     <h4>${exp.company}</h4>
-                    <div class="duration">${exp.duration}</div>
-                    <p>${exp.description}</p>
+                    <p class="experience-period">${exp.period}</p>
+                    <p class="experience-description">${exp.description}</p>
+                    ${exp.achievements ? `
+                        <ul class="experience-achievements">
+                            ${exp.achievements.map(achievement => 
+                                `<li>${achievement}</li>`
+                            ).join('')}
+                        </ul>
+                    ` : ''}
                 </div>
             `;
-            timeline.appendChild(timelineItem);
+
+            experienceContainer.appendChild(experienceItem);
         });
+    }
+
+    populateEducation() {
+        const educationContainer = document.querySelector('.education-timeline');
+        if (!educationContainer) return;
+
+        educationContainer.innerHTML = '';
+
+        this.config.education.forEach((edu, index) => {
+            const educationItem = document.createElement('div');
+            educationItem.className = 'education-item';
+            educationItem.style.animationDelay = `${index * 0.2}s`;
+
+            educationItem.innerHTML = `
+                <div class="education-content">
+                    <h3>${edu.degree}</h3>
+                    <h4>${edu.field}</h4>
+                    <h5>${edu.institution}</h5>
+                    <p class="education-period">${edu.period}</p>
+                    <p class="education-grade">${edu.grade}</p>
+                    <p class="education-description">${edu.description}</p>
+                </div>
+            `;
+
+            educationContainer.appendChild(educationItem);
+        });
+    }
+
+    populateContact() {
+        const { personal_info } = this.config;
+
+        const contactEmail = document.querySelector('.contact-item .contact-value');
+        if (contactEmail && contactEmail.tagName === 'A') {
+            contactEmail.textContent = personal_info.email;
+            contactEmail.href = `mailto:${personal_info.email}`;
+        }
     }
 
     populateSocialLinks() {
-        const socialElements = [
-            document.getElementById('social-links'),
-            document.getElementById('footer-social')
-        ];
+        const { social_links } = this.config;
 
-        socialElements.forEach(container => {
-            if (!container) return;
+        // Footer social links
+        const socialContainer = document.querySelector('.social-links');
+        if (socialContainer) {
+            socialContainer.innerHTML = '';
 
-            container.innerHTML = '';
+            Object.entries(social_links).forEach(([platform, url]) => {
+                if (url && url !== '' && url !== '#') {
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
 
-            Object.entries(this.config.social_links).forEach(([platform, url]) => {
-                if (!url || url === '') return;
+                    // Map platform names to Font Awesome icons
+                    const iconMap = {
+                        'github': 'github',
+                        'linkedin': 'linkedin',
+                        'twitter': 'twitter',
+                        'portfolio': 'globe'
+                    };
 
-                const link = document.createElement('a');
-                link.href = url;
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                link.className = 'social-link';
+                    const iconName = iconMap[platform] || platform;
+                    link.innerHTML = `<i class="fab fa-${iconName}"></i>`;
 
-                let icon = '';
-                switch (platform) {
-                    case 'github':
-                        icon = 'fab fa-github';
-                        break;
-                    case 'linkedin':
-                        icon = 'fab fa-linkedin-in';
-                        break;
-                    case 'twitter':
-                        icon = 'fab fa-twitter';
-                        break;
-                    default:
-                        icon = 'fas fa-link';
+                    socialContainer.appendChild(link);
                 }
-
-                link.innerHTML = `<i class="${icon}"></i>`;
-                container.appendChild(link);
             });
-        });
-    }
-
-    filterProjects(category) {
-        this.currentFilter = category;
-        const projectCards = document.querySelectorAll('.project-card');
-
-        projectCards.forEach(card => {
-            const cardCategory = card.dataset.category;
-            if (category === 'all' || cardCategory === category) {
-                card.classList.remove('hidden');
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'scale(1)';
-                }, 100);
-            } else {
-                card.classList.add('hidden');
-                card.style.opacity = '0';
-                card.style.transform = 'scale(0.8)';
-            }
-        });
+        }
     }
 
     toggleTheme() {
         document.body.classList.toggle('dark-mode');
-        const themeToggle = document.getElementById('theme-toggle');
-        const isDark = document.body.classList.contains('dark-mode');
+        const themeIcon = document.querySelector('#theme-toggle i');
 
-        if (themeToggle) {
-            themeToggle.innerHTML = isDark ? 
-                '<i class="fas fa-sun"></i>' : 
-                '<i class="fas fa-moon"></i>';
+        if (document.body.classList.contains('dark-mode')) {
+            if (themeIcon) themeIcon.className = 'fas fa-sun';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            if (themeIcon) themeIcon.className = 'fas fa-moon';
+            localStorage.setItem('theme', 'light');
         }
-
-        // Save theme preference
-        localStorage.setItem('darkMode', isDark);
-    }
-
-    initTypingEffect() {
-        const typingElement = document.querySelector('.typing-text');
-        if (!typingElement) return;
-
-        const text = this.config.personal_info.title;
-        let index = 0;
-        typingElement.textContent = '';
-
-        const typeText = () => {
-            if (index < text.length) {
-                typingElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeText, 100);
-            }
-        };
-
-        setTimeout(typeText, 1000);
     }
 
     initScrollAnimations() {
@@ -320,106 +378,46 @@ class Portfolio {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add('animate');
                 }
             });
         }, observerOptions);
 
-        // Observe all fade-in elements
-        setTimeout(() => {
-            const fadeElements = document.querySelectorAll('.fade-in');
-            fadeElements.forEach(el => observer.observe(el));
-        }, 500);
+        const animateElements = document.querySelectorAll('.skill-card, .project-card, .experience-item, .education-item');
+        animateElements.forEach(el => observer.observe(el));
     }
 
-    handleFormSubmit(e) {
-        e.preventDefault();
+    initTypingEffect() {
+        const typingText = document.querySelector('.typing-text');
+        if (!typingText) return;
 
-        const formData = new FormData(e.target);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
+        const text = typingText.textContent;
+        typingText.textContent = '';
 
-        // Create mailto link
-        const mailtoLink = `mailto:${this.config.personal_info.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+        let i = 0;
+        const typeWriter = () => {
+            if (i < text.length) {
+                typingText.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        };
 
-        // Open email client
-        window.location.href = mailtoLink;
-
-        // Show success message
-        this.showNotification('Message prepared! Your email client should open shortly.', 'success');
-
-        // Reset form
-        e.target.reset();
-    }
-
-    showNotification(message, type = 'info') {
-        // Create notification element
-        const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: ${type === 'success' ? '#10B981' : '#3B82F6'};
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-            z-index: 10000;
-            animation: slideInRight 0.3s ease;
-        `;
-        notification.textContent = message;
-
-        document.body.appendChild(notification);
-
-        // Remove after 3 seconds
-        setTimeout(() => {
-            notification.style.animation = 'slideOutRight 0.3s ease';
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.parentNode.removeChild(notification);
-                }
-            }, 300);
-        }, 3000);
-    }
-
-    updateElement(id, content) {
-        const element = document.getElementById(id);
-        if (element && content) {
-            element.textContent = content;
-        }
+        setTimeout(typeWriter, 1000);
     }
 }
 
-// Add CSS for notifications
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideInRight {
-        from { transform: translateX(100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-    }
-
-    @keyframes slideOutRight {
-        from { transform: translateX(0); opacity: 1; }
-        to { transform: translateX(100%); opacity: 0; }
-    }
-`;
-document.head.appendChild(style);
-
-// Initialize the portfolio when DOM is loaded
+// Initialize portfolio when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    new Portfolio();
+
     // Load saved theme
-    const savedTheme = localStorage.getItem('darkMode');
-    if (savedTheme === 'true') {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        const themeIcon = document.querySelector('#theme-toggle i');
+        if (themeIcon) {
+            themeIcon.className = 'fas fa-sun';
         }
     }
-
-    // Initialize portfolio
-    new Portfolio();
 });
