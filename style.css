@@ -969,7 +969,7 @@ html {
 }
 
 .project-image {
-  height: 50px;
+  height: 150px; /* or 120px, 180px — whatever works visually */
   width: 100%;
   background: var(--color-bg-2);
   border-radius: var(--radius-base);
@@ -977,13 +977,14 @@ html {
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-16);
+  overflow: hidden;
 }
 
 .project-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Crops excess but fills box without distortion */
   display: block;
-  object-fit: cover; /* Crop image while preserving aspect ratio */
 }
 
 .project-placeholder {
