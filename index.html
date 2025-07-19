@@ -14,7 +14,7 @@
 <nav class="navbar">
 <div class="container">
 <div class="nav-brand">
-<a class="nav-logo" href="#home">Sarthak Singh</a>
+<a class="nav-logo" href="#home">My Portfolio</a>
 </div>
 <button aria-label="Toggle navigation" class="nav-toggle">
 <span></span>
@@ -70,7 +70,7 @@
                     Currently working as a Senior Associate at PwC, I focus on developing innovative AI solutions that drive business value and operational efficiency. Skilled in Python, AWS, and machine learning, with a strong foundation in mathematics and computing.
                 </p>
                 <div class="about-achievements">
-                    <h3>Recent Achievements</h3>
+                    <h3>Certification</h3>
                     <ul>
                         <li>AWS Certified AI Practitioner (2025-28)</li>
                         <li>Generative AI with Large Language Models</li>
@@ -172,80 +172,147 @@
 <button class="filter-btn btn btn--secondary" data-filter="ML">ML</button>
 </div>
 <div class="projects-grid">
-<div class="project-card card" data-category="GenAI">
-<div class="card__body">
-<div class="project-image">
-<div class="project-placeholder">🤖</div>
-</div>
-<h3>GenAI Career Assistant</h3>
-<p>LLM-powered assistant for structured learning, resume building, and interview prep using Gemini &amp; LangGraph.</p>
-<div class="project-tech">
-<span class="tech-tag">LangGraph</span>
-<span class="tech-tag">Gemini</span>
-<span class="tech-tag">Streamlit</span>
-</div>
-<div class="project-links">
-<a class="btn btn--primary btn--sm" href="https://career-pilot.streamlit.app/" target="_blank">Live Demo</a>
-<a class="btn btn--outline btn--sm" href="https://github.com/sarthakk88/Job-Agent" target="_blank">GitHub</a>
-</div>
-</div>
-</div>
-<div class="project-card card" data-category="ML">
-<div class="card__body">
-<div class="project-image">
-    <img src="./assets/images/career-assistant.png" alt="ML Project Screenshot" class="project-img">
-<div class="project-placeholder">⚽</div>
-</div>
-<h3>FPL Toolset</h3>
-<p>Fantasy Premier League web app delivering analytics and a news chatbot via Streamlit and Gemini APIs.</p>
-<div class="project-tech">
-<span class="tech-tag">Streamlit</span>
-<span class="tech-tag">Python</span>
-<span class="tech-tag">XGBoost</span>
-</div>
-<div class="project-links">
-<a class="btn btn--primary btn--sm" href="#" target="_blank">Live Demo</a>
-<a class="btn btn--outline btn--sm" href="#" target="_blank">GitHub</a>
-</div>
-</div>
-</div>
-<div class="project-card card" data-category="ML">
-<div class="card__body">
-<div class="project-image">
-<div class="project-placeholder">🔍</div>
-</div>
-<h3>Conversational Threat Hunter</h3>
-<p>Bedrock-backed agent for MITRE ATT&amp;CK analysis on Security Lake data, cutting investigation time 45%.</p>
-<div class="project-tech">
-<span class="tech-tag">AWS Bedrock</span>
-<span class="tech-tag">OpenSearch</span>
-<span class="tech-tag">Lambda</span>
-</div>
-<div class="project-links">
-<a class="btn btn--primary btn--sm" href="#" target="_blank">Live Demo</a>
-<a class="btn btn--outline btn--sm" href="#" target="_blank">GitHub</a>
-</div>
-</div>
-</div>
-<div class="project-card card" data-category="GenAI">
-<div class="card__body">
-<div class="project-image">
-<div class="project-placeholder">📊</div>
-</div>
-<h3>Vendor Compliance Analyzer</h3>
-<p>Agentic workflow that evaluates third-party vendor evidence, outputs gap analysis in seconds.</p>
-<div class="project-tech">
-<span class="tech-tag">OpenSearch</span>
-<span class="tech-tag">LangChain</span>
-<span class="tech-tag">Bedrock</span>
-</div>
-<div class="project-links">
-<a class="btn btn--primary btn--sm" href="#" target="_blank">Live Demo</a>
-<a class="btn btn--outline btn--sm" href="#" target="_blank">GitHub</a>
-</div>
-</div>
-</div>
-</div>
+  <!-- Vendor Compliance Agent -->
+  <div class="project-card card" data-category="GenAI">
+    <div class="card__body">
+      <div class="project-image">
+        <img src="./assets/images/vendor-compliance.jpg" alt="Vendor Compliance Agent Screenshot" class="project-img">
+        <div class="project-placeholder">🤖</div>
+      </div>
+      <h3>Vendor Compliance Agent</h3>
+      <p>Designed an agentic workflow using OpenSearch, LangChain, and Bedrock to evaluate third-party vendor evidence for compliance, generate comprehensive gap analyses, and develop a custom evaluator—reducing evaluation time by 99%</p>
+      <div class="project-tech">
+        <span class="tech-tag">OpenSearch</span>
+        <span class="tech-tag">LangChain</span>
+        <span class="tech-tag">AWS Bedrock</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">AWS Textract</span>
+
+      </div>
+      <div class="project-links"></div>
+    </div>
+  </div>
+
+  <!-- GenAI Data Classification Agent -->
+  <div class="project-card card" data-category="GenAI">
+    <div class="card__body">
+      <div class="project-image">
+        <img src="./assets/images/data-agent.png" alt="GenAI Data Classification Agent Screenshot" class="project-img">
+        <div class="project-placeholder">🤖</div>
+      </div>
+      <h3>GenAI Data Classification Agent</h3>
+      <p>GenAI agent leveraging OpenSearch and SageMaker to classify into correct event categories and map raw data schema to OCSF schema. Achieved 50% performance improvement with custom embedding model.</p>
+      <div class="project-tech">
+        <span class="tech-tag">OpenSearch</span>
+        <span class="tech-tag">SageMaker</span>
+        <span class="tech-tag">Sentence Transformer</span>
+        <span class="tech-tag">Python</span>
+      </div>
+      <div class="project-links"></div>
+    </div>
+  </div>
+
+  <!-- AI Threat Hunting Agent -->
+  <div class="project-card card" data-category="GenAI">
+    <div class="card__body">
+      <div class="project-image">
+        <img src="./assets/images/threat-hunting.png" alt="AI Threat Hunting Agent Screenshot" class="project-img">
+        <div class="project-placeholder">🤖</div>
+      </div>
+      <h3>AI Threat Hunting Agent</h3>
+      <p>Conversational AI agent for MITRE ATT&CK analysis on Security Lake data, enhancing threat investigation and mitigation. Reduced threat investigation speed by 45%.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Bedrock</span>
+        <span class="tech-tag">OpenSearch</span>
+        <span class="tech-tag">MITRE ATT&CK</span>
+        <span class="tech-tag">AWS Security Lake</span>
+        <span class="tech-tag">Athena</span>
+      </div>
+      <div class="project-links"></div>
+    </div>
+  </div>
+
+  <!-- FPL Toolset -->
+  <div class="project-card card" data-category="GenAI">
+    <div class="card__body">
+      <div class="project-image">
+        <img src="./assets/images/fpl-toolset.png" alt="FPL Toolset Screenshot" class="project-img">
+        <div class="project-placeholder">🤖</div>
+      </div>
+      <h3>FPL Toolset</h3>
+      <p>Fantasy Premier League team building website using data from Understat and FPL APIs, with an agentic chatbot for real-time team news updates using Langraph and Gemini.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Streamlit</span>
+        <span class="tech-tag">Langraph</span>
+        <span class="tech-tag">Gemini</span>
+      </div>
+      <div class="project-links">
+        <a class="btn btn--primary btn--sm" href="https://fpl-toolset.streamlit.app/" target="_blank">Live Demo</a>
+        <a class="btn btn--outline btn--sm" href="https://github.com/sarthakk88/FPL-Toolset" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GenAI Career Assistant -->
+  <div class="project-card card" data-category="GenAI">
+    <div class="card__body">
+      <div class="project-image">
+        <img src="./assets/images/career-assistant.png" alt="GenAI Career Assistant Screenshot" class="project-img">
+        <div class="project-placeholder">🤖</div>
+      </div>
+      <h3>GenAI Career Assistant</h3>
+      <p>AI-powered career assistant using Langraph and Gemini, with tools like DuckDuckGo for real-time information retrieval. Enables structured learning, resume building, interview preparation, and job search assistance.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Langraph</span>
+        <span class="tech-tag">Gemini</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">DuckDuckGo API</span>
+      </div>
+      <div class="project-links">
+        <a class="btn btn--outline btn--sm" href="https://github.com/sarthakk88/Job-Agent" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Anomaly Detection System -->
+  <div class="project-card card" data-category="ML">
+    <div class="card__body">
+      <div class="project-image">
+        <img src="./assets/images/anomaly-detection.jpg" alt="Anomaly Detection System Screenshot" class="project-img">
+        <div class="project-placeholder">📊</div>
+      </div>
+      <h3>Anomaly Detection System</h3>
+      <p>Unsupervised anomaly detection using Isolation Forest and DBSCAN on Okta login data for cybersecurity platform processing 10M+ data points daily.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Isolation Forest</span>
+        <span class="tech-tag">DBSCAN</span>
+        <span class="tech-tag">AWS Glue</span>
+        <span class="tech-tag">EMR</span>
+      </div>
+      <div class="project-links"></div>
+    </div>
+  </div>
+
+  <!-- Customer Segmentation ML Model -->
+  <div class="project-card card" data-category="ML">
+    <div class="card__body">
+      <div class="project-image">
+        <img src="./assets/images/customer-segmentation.png" alt="Customer Segmentation ML Model Screenshot" class="project-img">
+        <div class="project-placeholder">📊</div>
+      </div>
+      <h3>Customer Segmentation ML Model</h3>
+      <p>XGBoost-based machine learning model deployed in SageMaker to identify high-potential customers for outbound campaigns using internal customer data.</p>
+      <div class="project-tech">
+        <span class="tech-tag">XGBoost</span>
+        <span class="tech-tag">SageMaker</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">AWS</span>
+      </div>
+      <div class="project-links"></div>
+    </div>
+  </div>
 </div>
 </section>
 <!-- Resources Section -->
