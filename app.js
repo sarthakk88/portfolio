@@ -33,26 +33,25 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             isDarkMode = true;
             document.documentElement.setAttribute('data-color-scheme', 'dark');
-            if (themeIcon) themeIcon.textContent = '☀️';
+            themeIcon.textContent = '☀️';
         } else {
             isDarkMode = false;
             document.documentElement.setAttribute('data-color-scheme', 'light');
-            if (themeIcon) themeIcon.textContent = '🌙';
+            themeIcon.textContent = '🌙';
         }
 
         // Theme toggle functionality
-        if (themeToggle) {
-            themeToggle.addEventListener('click', function() {
-                isDarkMode = !isDarkMode;
-                if (isDarkMode) {
-                    document.documentElement.setAttribute('data-color-scheme', 'dark');
-                    if (themeIcon) themeIcon.textContent = '☀️';
-                } else {
-                    document.documentElement.setAttribute('data-color-scheme', 'light');
-                    if (themeIcon) themeIcon.textContent = '🌙';
-                }
-            });
-        }
+        themeToggle.addEventListener('click', function() {
+            isDarkMode = !isDarkMode;
+
+            if (isDarkMode) {
+                document.documentElement.setAttribute('data-color-scheme', 'dark');
+                themeIcon.textContent = '☀️';
+            } else {
+                document.documentElement.setAttribute('data-color-scheme', 'light');
+                themeIcon.textContent = '🌙';
+            }
+        });
 
         // Listen for system theme changes
         if (window.matchMedia) {
@@ -60,11 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!isDarkMode && e.matches) {
                     isDarkMode = true;
                     document.documentElement.setAttribute('data-color-scheme', 'dark');
-                    if (themeIcon) themeIcon.textContent = '☀️';
+                    themeIcon.textContent = '☀️';
                 } else if (isDarkMode && !e.matches) {
                     isDarkMode = false;
                     document.documentElement.setAttribute('data-color-scheme', 'light');
-                    if (themeIcon) themeIcon.textContent = '🌙';
+                    themeIcon.textContent = '🌙';
                 }
             });
         }
@@ -78,28 +77,26 @@ document.addEventListener('DOMContentLoaded', function() {
         const navMenu = document.querySelector('.nav-menu');
         const navLinks = document.querySelectorAll('.nav-link');
 
-        if (navToggle && navMenu) {
-            navToggle.addEventListener('click', function() {
-                navToggle.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
 
-            // Close mobile menu when clicking on a nav link
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    navToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                });
+        // Close mobile menu when clicking on a nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
             });
+        });
 
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                    navToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                }
-            });
-        }
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
     }
 
     /**
@@ -119,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function typeWriter() {
             const currentRole = roles[currentRoleIndex];
+
             if (isDeleting) {
                 typewriterElement.textContent = currentRole.substring(0, currentCharIndex - 1);
                 currentCharIndex--;
@@ -128,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             let typeSpeed = isDeleting ? deletingSpeed : typingSpeed;
+
             if (!isDeleting && currentCharIndex === currentRole.length) {
                 typeSpeed = pauseTime;
                 isDeleting = true;
@@ -144,19 +143,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * Initialize project filtering - FIXED VERSION
+     * Initialize project filtering - COMPLETELY FIXED VERSION
      */
     function initializeProjectFilter() {
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectsContainer = document.querySelector('.projects-grid');
 
-        if (!filterButtons.length || !projectsContainer) return;
+        if (!projectsContainer) return;
 
-        // Store original projects for restoration
-        const originalProjects = Array.from(document.querySelectorAll('.project-card')).map(card => ({
-            element: card,
-            category: card.getAttribute('data-category')
-        }));
+        // Store original project cards
+        const allProjectCards = Array.from(document.querySelectorAll('.project-card'));
 
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
@@ -166,45 +162,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
 
-                // Fade out current projects
-                const currentProjects = document.querySelectorAll('.project-card');
-                currentProjects.forEach(card => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                });
+                // Add fade out effect
+                projectsContainer.style.opacity = '0.3';
 
-                // After fade out animation completes, filter and reposition
                 setTimeout(() => {
                     // Clear the container
                     projectsContainer.innerHTML = '';
 
-                    // Filter and add matching projects
-                    const filteredProjects = originalProjects.filter(project => 
-                        filter === 'all' || project.category === filter
-                    );
-
-                    filteredProjects.forEach(project => {
-                        // Clone the original element to avoid moving it
-                        const clonedElement = project.element.cloneNode(true);
-
-                        // Reset styles for animation
-                        clonedElement.style.opacity = '0';
-                        clonedElement.style.transform = 'translateY(20px)';
-                        clonedElement.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-
-                        projectsContainer.appendChild(clonedElement);
+                    // Filter and add projects
+                    const filteredProjects = allProjectCards.filter(card => {
+                        const category = card.getAttribute('data-category');
+                        return filter === 'all' || category === filter;
                     });
 
-                    // Animate in the filtered projects with stagger
-                    const newProjects = document.querySelectorAll('.project-card');
-                    newProjects.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, index * 100);
+                    // Add filtered projects back to container
+                    filteredProjects.forEach(card => {
+                        // Clone the card to avoid moving original elements
+                        const clonedCard = card.cloneNode(true);
+                        projectsContainer.appendChild(clonedCard);
                     });
 
-                }, 300);
+                    // Fade back in
+                    projectsContainer.style.opacity = '1';
+                }, 200);
             });
         });
     }
@@ -214,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function initializeBackToTop() {
         const backToTopButton = document.getElementById('backToTop');
+
         if (!backToTopButton) return;
 
         // Show/hide button based on scroll position
@@ -236,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Initial check and scroll listener
         toggleBackToTop();
-        window.addEventListener('scroll', debounce(toggleBackToTop, 100));
+        window.addEventListener('scroll', toggleBackToTop);
     }
 
     /**
@@ -257,6 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 const targetElement = document.querySelector(href);
+
                 if (targetElement) {
                     e.preventDefault();
 
@@ -279,18 +261,15 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function initializeContactForm() {
         const contactForm = document.querySelector('.contact-form');
+
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 // Basic client-side validation
-                const name = document.getElementById('name');
-                const email = document.getElementById('email');
-                const message = document.getElementById('message');
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
 
-                const nameValue = name ? name.value.trim() : '';
-                const emailValue = email ? email.value.trim() : '';
-                const messageValue = message ? message.value.trim() : '';
-
-                if (!nameValue || !emailValue || !messageValue) {
+                if (!name || !email || !message) {
                     e.preventDefault();
                     alert('Please fill in all required fields.');
                     return;
@@ -298,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Email validation
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(emailValue)) {
+                if (!emailRegex.test(email)) {
                     e.preventDefault();
                     alert('Please enter a valid email address.');
                     return;
@@ -330,6 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.key === 'Escape') {
                 const navToggle = document.querySelector('.nav-toggle');
                 const navMenu = document.querySelector('.nav-menu');
+
                 if (navMenu && navMenu.classList.contains('active')) {
                     navToggle.classList.remove('active');
                     navMenu.classList.remove('active');
@@ -365,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, observerOptions);
 
         // Observe elements for animation
-        const animateElements = document.querySelectorAll('.skill-item');
+        const animateElements = document.querySelectorAll('.project-card, .skill-item');
         animateElements.forEach(el => {
             // Only apply initial animation styles if not already styled
             if (!el.style.opacity) {
@@ -389,15 +369,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function updateNavbar() {
             if (window.pageYOffset > 50) {
-                navbar.style.background = 'rgba(var(--color-surface), 0.95)';
+                navbar.style.background = 'rgba(var(--color-surface-rgb), 0.95)';
                 navbar.style.backdropFilter = 'blur(10px)';
             } else {
-                navbar.style.background = 'rgba(var(--color-surface), 0.8)';
+                navbar.style.background = 'rgba(var(--color-surface-rgb), 0.8)';
                 navbar.style.backdropFilter = 'blur(5px)';
             }
         }
 
-        window.addEventListener('scroll', debounce(updateNavbar, 50));
+        window.addEventListener('scroll', updateNavbar);
         updateNavbar(); // Initial call
     }
 

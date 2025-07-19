@@ -1,291 +1,241 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarthak Singh | Data Scientist</title>
-    <meta name="description" content="Data Scientist with expertise in AI/ML, AWS, and GenAI solutions">
-
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sarthak Singh - GenAI &amp; Data Specialist</title>
+<meta content="Generative-AI specialist building scalable AI agents and data pipelines. Passionate about solving business problems with ML and cloud." name="description"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='0.9em' font-size='90'&gt;💻&lt;/text&gt;&lt;/svg&gt;" rel="icon" type="image/png"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="#" class="nav-logo">Sarthak Singh</a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li>
-                    <button class="theme-toggle btn btn--outline btn--sm" aria-label="Toggle theme">
-                        <span class="theme-icon">🌙</span>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<!-- Navigation -->
+<nav class="navbar">
+<div class="container">
+<div class="nav-brand">
+<a class="nav-logo" href="#home">Sarthak Singh</a>
+</div>
+<button aria-label="Toggle navigation" class="nav-toggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div class="nav-menu">
+<a class="nav-link" href="#about">About</a>
+<a class="nav-link" href="#skills">Skills</a>
+<a class="nav-link" href="#projects">Projects</a>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Hi, I'm <span class="highlight">Sarthak Singh</span></h1>
-                    <p class="hero-subtitle">
-                        I'm a <span class="typewriter" data-roles="Data Scientist,GenAI Specialist,ML Engineer,AWS Expert"></span>
-                    </p>
-                    <p class="hero-description">
-                        Generative-AI specialist building scalable AI agents and data pipelines. Passionate about solving business problems with ML and cloud.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn--primary btn--lg">View My Work</a>
-                        <a href="#contact" class="btn btn--outline btn--lg">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="./assets/images/profile.jpg" alt="Sarthak Singh" width="300" height="300">
-                </div>
-            </div>
-        </div>
-    </section>
+<a class="nav-link" href="#contact">Contact</a>
+<button aria-label="Toggle dark mode" class="theme-toggle btn btn--secondary btn--sm">
+<span class="theme-icon">🌙</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+<div class="hero-text">
+<h1>Hi, I'm <span class="highlight">Sarthak Singh</span></h1>
+<p class="hero-subtitle">
+                        I'm a <span class="typewriter" data-roles="Data Scientist,ML Engineer,GenAI Developer,Senior Associate @ PwC"></span>
+</p>
+<p class="hero-description">Generative-AI specialist building scalable AI agents and data pipelines. Passionate about solving business problems with ML and cloud.</p>
+<div class="hero-actions">
+<a class="btn btn--primary btn--lg" href="#projects">View Projects</a>
+<a class="btn btn--outline btn--lg" download="Sarthak_Singh_Resume.pdf" href="data:application/pdf;base64,JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PAovVGl0bGUgKFNhcnRoYWsgU2luZ2ggLSBSZXN1bWUpCi9DcmVhdb9yIChHZW5lcmF0ZWQgUmVzdW1lKQo+PgplbmRvYmoKMiAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMyAwIFIKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFs0IDAgUl0KL0NvdW50IDEKPD4KZW5kb2JqCjQgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL01lZGlhQm94IFswIDAgNjEyIDc5Ml0KPj4KZW5kb2JqCnhyZWYKMCA1CjAwMDAwMDAwMDAgNjU1MzUgZgowMDAwMDAwMDA5IDAwMDAwIG4KMDAwMDAwMDA3NCAwMDAwMCBuCjAwMDAwMDAxMjEgMDAwMDAgbgowMDAwMDAwMTc4IDAwMDAwIG4KdHJhaWxlcgo8PAovU2l6ZSA1Ci9Sb290IDIgMCBSCj4+CnN0YXJ0eHJlZgoyMzUKJSVFT0YK">Download Résumé</a>
+</div>
+</div>
+<div class="hero-image">
+<img alt="Sarthak Singh - Profile" height="300" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Ccircle cx='150' cy='150' r='150' fill='%23E5E7EB'/%3E%3Ccircle cx='150' cy='120' r='40' fill='%236B7280'/%3E%3Cpath d='M100 200 Q150 160 200 200 Q200 240 100 240 Z' fill='%236B7280'/%3E%3C/svg%3E" width="300"/>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="section" id="about">
+<div class="container">
+<div class="section-header">
+<h2>About Me</h2>
+<p>Get to know more about my background and expertise</p>
+</div>
+<div class="about-content">
+<div class="about-text">
+<p>Generative-AI specialist building scalable AI agents and data pipelines. Passionate about solving business problems with ML and cloud.</p>
+<p>Currently working as a Senior Associate at PwC, I focus on developing innovative AI solutions that drive business value and operational efficiency.</p>
+</div>
+<div class="about-education">
+<h3>Education</h3>
+<div class="education-item card">
+<div class="card__body">
+<h4>Delhi Technological University</h4>
+<p><strong>B.Tech, Mathematics &amp; Computing</strong></p>
+<p>2018-2022 • CGPA: 8.57</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="section" id="skills">
+<div class="container">
+<div class="section-header">
+<h2>Technical Skills</h2>
+<p>Technologies and tools I work with</p>
+</div>
+<div class="skills-grid"><div class="skill-category"><h4>Programming Languages</h4></div><div class="skill-item">Python</div><div class="skill-item">C/C++</div><div class="skill-item">Node.js</div><div class="skill-item">SQL</div><div class="skill-category"><h4>AI &amp; Machine Learning</h4></div><div class="skill-item">GenAI</div><div class="skill-item">LangChain</div><div class="skill-item">Transformers</div><div class="skill-item">PyTorch</div><div class="skill-item">TensorFlow</div><div class="skill-item">Scikit-learn</div><div class="skill-item">Natural Language Processing</div><div class="skill-item">Neural Networks</div><div class="skill-category"><h4>AWS &amp; Cloud Services</h4></div><div class="skill-item">AWS Lambda</div><div class="skill-item">SageMaker</div><div class="skill-item">OpenSearch</div><div class="skill-item">Bedrock</div><div class="skill-item">AWS Glue</div><div class="skill-item">EMR</div><div class="skill-item">DynamoDB</div><div class="skill-item">S3</div><div class="skill-item">Athena</div><div class="skill-item">Google Cloud Platform</div><div class="skill-category"><h4>Data Engineering &amp; Analytics</h4></div><div class="skill-item">Pandas</div><div class="skill-item">NumPy</div><div class="skill-item">PySpark</div><div class="skill-item">MySQL</div><div class="skill-item">Tableau</div><div class="skill-item">QuickSight</div><div class="skill-item">Streamlit</div><div class="skill-category"><h4>Web Development &amp; APIs</h4></div><div class="skill-item">FastAPI</div><div class="skill-item">Docker</div><div class="skill-item">REST APIs</div><div class="skill-category"><h4>Specialized AI Tools</h4></div><div class="skill-item">OpenSearchpy</div><div class="skill-item">RAGAs</div><div class="skill-item">AWS Textract</div><div class="skill-item">Langraph</div><div class="skill-item">Gemini</div></div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="section" id="projects">
+<div class="container">
+<div class="section-header">
+<h2>Featured Projects</h2>
+<p>A showcase of my recent work and contributions</p>
+</div>
+<div class="project-filters">
+<button class="filter-btn btn btn--secondary active" data-filter="all">All</button>
+<button class="filter-btn btn btn--secondary" data-filter="GenAI">GenAI</button>
+<button class="filter-btn btn btn--secondary" data-filter="ML">ML</button>
+</div>
+<div class="projects-grid">
+<div class="project-card card" data-category="GenAI">
+<div class="card__body">
+<div class="project-image">
+<div class="project-placeholder">🤖</div>
+</div>
+<h3>GenAI Career Assistant</h3>
+<p>LLM-powered assistant for structured learning, resume building, and interview prep using Gemini &amp; LangGraph.</p>
+<div class="project-tech">
+<span class="tech-tag">LangGraph</span>
+<span class="tech-tag">Gemini</span>
+<span class="tech-tag">DuckDuckGo</span>
+</div>
+<div class="project-links">
+<a class="btn btn--primary btn--sm" href="#" target="_blank">Live Demo</a>
+<a class="btn btn--outline btn--sm" href="#" target="_blank">GitHub</a>
+</div>
+</div>
+</div>
+<div class="project-card card" data-category="ML">
+<div class="card__body">
+<div class="project-image">
+<div class="project-placeholder">⚽</div>
+</div>
+<h3>FPL Toolset</h3>
+<p>Fantasy Premier League web app delivering analytics and a news chatbot via Streamlit and Gemini APIs.</p>
+<div class="project-tech">
+<span class="tech-tag">Streamlit</span>
+<span class="tech-tag">Python</span>
+<span class="tech-tag">XGBoost</span>
+</div>
+<div class="project-links">
+<a class="btn btn--primary btn--sm" href="#" target="_blank">Live Demo</a>
+<a class="btn btn--outline btn--sm" href="#" target="_blank">GitHub</a>
+</div>
+</div>
+</div>
+<div class="project-card card" data-category="ML">
+<div class="card__body">
+<div class="project-image">
+<div class="project-placeholder">🔍</div>
+</div>
+<h3>Conversational Threat Hunter</h3>
+<p>Bedrock-backed agent for MITRE ATT&amp;CK analysis on Security Lake data, cutting investigation time 45%.</p>
+<div class="project-tech">
+<span class="tech-tag">AWS Bedrock</span>
+<span class="tech-tag">OpenSearch</span>
+<span class="tech-tag">Lambda</span>
+</div>
+<div class="project-links">
+<a class="btn btn--primary btn--sm" href="#" target="_blank">Live Demo</a>
+<a class="btn btn--outline btn--sm" href="#" target="_blank">GitHub</a>
+</div>
+</div>
+</div>
+<div class="project-card card" data-category="GenAI">
+<div class="card__body">
+<div class="project-image">
+<div class="project-placeholder">📊</div>
+</div>
+<h3>Vendor Compliance Analyzer</h3>
+<p>Agentic workflow that evaluates third-party vendor evidence, outputs gap analysis in seconds.</p>
+<div class="project-tech">
+<span class="tech-tag">OpenSearch</span>
+<span class="tech-tag">LangChain</span>
+<span class="tech-tag">Bedrock</span>
+</div>
+<div class="project-links">
+<a class="btn btn--primary btn--sm" href="#" target="_blank">Live Demo</a>
+<a class="btn btn--outline btn--sm" href="#" target="_blank">GitHub</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Resources Section -->
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <p>Get to know more about my background and expertise</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Data Scientist with 3 years of experience in designing and deploying data-driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud-based systems.
-                    </p>
-                    <p>
-                        Currently working as a Senior Associate at PwC, I focus on developing innovative AI solutions that drive business value and operational efficiency. Skilled in Python, AWS, and machine learning, with a strong foundation in mathematics and computing.
-                    </p>
-                    <div class="about-achievements">
-                        <h3>Recent Achievements</h3>
-                        <ul>
-                            <li>AWS Certified AI Practitioner (2025-28)</li>
-                            <li>PwC Star Team and Individual Award (2024)</li>
-                            <li>Reduced threat investigation time by 45% with AI agent</li>
-                            <li>Achieved 99% reduction in vendor evaluation time</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="about-education">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <h4>Delhi Technological University</h4>
-                        <p><strong>B.Tech, Mathematics & Computing</strong></p>
-                        <p>2018-2022 • CGPA: 8.57</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Skills & Technologies</h2>
-                <p>Technologies and tools I work with</p>
-            </div>
-            <div id="skills-container" class="skills-grid">
-                <!-- Skills will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>A showcase of my recent work and contributions</p>
-            </div>
-
-            <div class="project-filters">
-                <button class="btn btn--outline filter-btn active" data-filter="all">All Projects</button>
-                <button class="btn btn--outline filter-btn" data-filter="ai">GenAI</button>
-                <button class="btn btn--outline filter-btn" data-filter="ml">Machine Learning</button>
-            </div>
-
-            <div id="projects-container" class="projects-grid">
-                <!-- Projects will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Let's Connect</h2>
-                <p>Let's discuss opportunities and collaborations</p>
-            </div>
-
-            <div class="contact-content">
-                <form class="contact-form" action="mailto:sarthak.snhsingh104@gmail.com" method="post" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name *</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email *</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" id="subject" name="subject" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message *</label>
-                        <textarea id="message" name="message" rows="6" class="form-control" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-social">
-                <a href="https://github.com/sarthakk88" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="http://linkedin.com/in/sarthakk88" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:sarthak.snhsingh104@gmail.com" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            <p>&copy; 2025 Sarthak Singh. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- JavaScript -->
-    <script src="app.js"></script>
-
-    <!-- Dynamic Content Loading Script -->
-    <script>
-        // Load and render content from config.json
-        fetch('./config.json')
-            .then(response => response.json())
-            .then(config => {
-                // Load Skills
-                const skillsContainer = document.getElementById('skills-container');
-                if (skillsContainer && config.skills) {
-                    skillsContainer.innerHTML = '';
-                    config.skills.forEach(category => {
-                        category.technologies.forEach(tech => {
-                            const skillItem = document.createElement('div');
-                            skillItem.className = 'skill-item';
-                            skillItem.textContent = tech;
-                            skillsContainer.appendChild(skillItem);
-                        });
-                    });
-                }
-
-                // Load Projects
-                const projectsContainer = document.getElementById('projects-container');
-                if (projectsContainer && config.projects) {
-                    projectsContainer.innerHTML = '';
-                    config.projects.forEach(project => {
-                        const projectCard = document.createElement('div');
-                        projectCard.className = 'project-card card';
-                        projectCard.setAttribute('data-category', project.category);
-
-                        projectCard.innerHTML = `
-                            <div class="card__body">
-                                <div class="project-image">
-                                    <img src="${project.image}" alt="${project.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                    <div class="project-placeholder" style="display: none;">
-                                        <i class="fas fa-${project.category === 'ai' ? 'brain' : 'chart-line'}"></i>
-                                    </div>
-                                </div>
-                                <h3>${project.title}</h3>
-                                <p>${project.description}</p>
-                                <div class="project-tech">
-                                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                                </div>
-                                <div class="project-links">
-                                    ${project.github ? `<a href="${project.github}" target="_blank" class="btn btn--outline btn--sm" rel="noopener noreferrer">
-                                        <i class="fab fa-github"></i> Code
-                                    </a>` : ''}
-                                    ${project.demo ? `<a href="${project.demo}" target="_blank" class="btn btn--primary btn--sm" rel="noopener noreferrer">
-                                        <i class="fas fa-external-link-alt"></i> Demo
-                                    </a>` : ''}
-                                </div>
-                            </div>
-                        `;
-                        projectsContainer.appendChild(projectCard);
-                    });
-                }
-
-                // Update social links
-                const githubLink = document.querySelector('a[href*="github"]');
-                const linkedinLink = document.querySelector('a[href*="linkedin"]');
-                const emailLinks = document.querySelectorAll('a[href*="mailto"]');
-
-                if (githubLink && config.social_links.github) {
-                    githubLink.href = config.social_links.github;
-                }
-                if (linkedinLink && config.social_links.linkedin) {
-                    linkedinLink.href = config.social_links.linkedin;
-                }
-                emailLinks.forEach(link => {
-                    if (config.personal_info.email) {
-                        link.href = `mailto:${config.personal_info.email}`;
-                    }
-                });
-
-                // Update contact form action
-                const contactForm = document.querySelector('.contact-form');
-                if (contactForm && config.personal_info.email) {
-                    contactForm.action = `mailto:${config.personal_info.email}`;
-                }
-
-                // Update title and meta description
-                if (config.personal_info.name) {
-                    document.title = `${config.personal_info.name} | ${config.personal_info.title}`;
-                }
-            })
-            .catch(error => {
-                console.error('Error loading config:', error);
-                // Fallback content or error handling
-            });
-    </script>
+<!-- Contact Section -->
+<section class="section" id="contact">
+<div class="container">
+<div class="section-header">
+<h2>Get In Touch</h2>
+<p>Let's discuss opportunities and collaborations</p>
+</div>
+<div class="contact-content">
+<form action="mailto:sarthak@example.com" class="contact-form" enctype="text/plain" method="post">
+<div class="form-group">
+<label class="form-label" for="name">Name *</label>
+<input class="form-control" id="name" name="name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="email">Email *</label>
+<input class="form-control" id="email" name="email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="message">Message *</label>
+<textarea class="form-control" id="message" name="message" required="" rows="5"></textarea>
+</div>
+<button class="btn btn--primary btn--full-width" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://linkedin.com/in/sarthaksingh" target="_blank">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24">
+<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+</svg>
+</a>
+<a aria-label="GitHub" href="https://github.com/sarthaksingh" target="_blank">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+</svg>
+</a>
+<a aria-label="Email" href="mailto:sarthak@example.com">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"></path>
+</svg>
+</a>
+</div>
+<p>© 2025 Sarthak Singh. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Back to Top Button -->
+<button aria-label="Back to top" class="back-to-top" id="backToTop">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24">
+<path d="M12 2l-10 10h6v10h8v-10h6l-10-10z"></path>
+</svg>
+</button>
+<script defer="" src="app.js"></script>
 </body>
 </html>
