@@ -25,15 +25,14 @@
     {
       "category": "AI/ML",
       "technologies": [
+        "Machine Learning",
+        "NLP",
+        "Neural Network",
         "GenAI",
-        "LangChain",
         "Transformers",
         "PyTorch",
         "TensorFlow",
-        "Scikit-learn",
-        "Machine Learning",
-        "Natural Language Processing(NLP)",
-        "Neural Network"
+        "Scikit-learn"
       ]
     },
     {
@@ -44,11 +43,12 @@
         "OpenSearch",
         "Bedrock",
         "Glue",
-        "EMR",
+        "Serverless EMR",
         "DynamoDB",
         "S3",
         "Athena",
-        "GCP"
+        "VertexAI",
+        "Google Agent Assist"
       ]
     },
     {
@@ -58,7 +58,6 @@
         "NumPy",
         "PySpark",
         "SQL",
-        "MySQL",
         "Tableau",
         "QuickSight"
       ]
@@ -74,8 +73,8 @@
     {
       "category": "Specialized Tools",
       "technologies": [
-        "OpenSearchpy",
         "RAGAs",
+        "LangChain",
         "AWS Textract"
       ]
     }
@@ -196,7 +195,7 @@
       "company": "PricewaterhouseCoopers",
       "position": "Senior Associate",
       "duration": "Jul 2022 - Present",
-      "description": "Data Scientist designing and deploying data\u2011driven solutions using AWS and AI technologies. Proven track record in developing robust ETL pipelines, creating conversational AI agents, and optimizing cloud\u2011based systems."
+      "description": "Designed and deployed data\u2011driven solutions using AWS and AI technologies. Developed robust ETL pipelines, created conversational AI agents, and optimized cloud\u2011based systems."
     },
     {
       "company": "Delhi Technological University",
